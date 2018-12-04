@@ -52,6 +52,12 @@ We should consider adding a new library into the mix:
 
 ---
 
+## Understanding Jest
+
++++?code=code/jesteExample.rb&lang=javascript
+
+---
+
 ### End to End Tests with Cypress
 
 - ???
