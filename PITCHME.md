@@ -15,9 +15,8 @@
 
 ---
 
-## The Sad Fact
+### Testing in JavaScript Isn't Easy
 
-Testing in JavaScript isn't easy. We have to deal with:
 - Async behavior (i.e. promises)
 - The high degree of complexity with user interfaces
 - Mocking external calls
@@ -27,16 +26,15 @@ It's just not as simple as the "black-box" testing scenarios in our Rails code.
 
 +++
 
-## So What Do We Do?
+### So What Do We Do? Understand Our Tools
 
-We use the same libraries we always use and understand their full capabilities:
 - Jest
 - Enzyme
 - Cypress
 
 +++
 
-## So What Do We Do?
+### So What Do We Do? Understand Our Tools
 
 We should consider adding a new library into the mix:
 - Jest
@@ -46,13 +44,13 @@ We should consider adding a new library into the mix:
 
 ---
 
-## What About Snapshot Tests?
+### What About Snapshot Tests?
 
 "Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all." - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
 
 ---
 
-## Understanding Jest
+### Understanding Jest
 
 +++?code=code/jestExample.js&lang=javascript
 
