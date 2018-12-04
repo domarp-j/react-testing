@@ -7,8 +7,8 @@
 
 ### Questions We'll Answer
 
-- How can we make our unit tests better?
-  - Is Enzyme our best option?
-- When should we test behavior instead of functionality?
-  - What tools can we use for behavioral testing?
-- How can we make writing tests easier?
+- What mentality should we have when we approach testing with React?
+- What should our **unit tests** look like?
+  - Are there other options outside of Enzyme? What is Enzyme? Why am I even here?
+- What should our **integration tests** look like?
+  - Are there alternatives to Cucumber/Selenium?
