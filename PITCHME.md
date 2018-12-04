@@ -29,9 +29,7 @@ It's just not as simple as the "black-box" testing scenarios in our Rails code.
 
 ## What About Snapshot Tests?
 
-Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all.
-
-- Visual Testing Handbook
+"Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all." - Visual Testing Handbook
 
 ---
 
