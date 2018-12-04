@@ -23,6 +23,8 @@ Testing in JavaScript isn't easy. We have to deal with:
 
 It's just not as simple as "black box" testing
 
+---
+
 ### End to End Tests with Cypress
 
 - ???
