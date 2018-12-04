@@ -18,12 +18,20 @@
 ## The Sad Fact
 
 Testing in JavaScript isn't easy. We have to deal with:
-- Async behavior (promises, API calls, etc)
+- Async behavior (i.e. promises)
 - The high degree of complexity with user interfaces
+- Mocking external calls
 
-It's just not as simple as "black box" testing
+Note:
+It's just not as simple as the "black-box" testing scenarios in our Rails code.
 
 ---
+
+## What About Snapshot Tests?
+
+Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all.
+
+- Visual Testing Handbook
 
 ### End to End Tests with Cypress
 
