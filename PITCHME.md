@@ -26,7 +26,7 @@ It's just not as simple as the "black-box" testing scenarios in our Rails code.
 
 +++
 
-### So What Do We Do? Understand Our Tools
+### So What Do We Do?
 
 - Jest
 - Enzyme
@@ -34,13 +34,9 @@ It's just not as simple as the "black-box" testing scenarios in our Rails code.
 
 +++
 
-### So What Do We Do? Understand Our Tools
+### So What Do We Do?
 
-We should consider adding a new library into the mix:
-- Jest
-- Enzyme
-- **react-testing-library**
-- Cypress
+We should consider adding **react-testing-library** into the mix:
 
 ---
 
