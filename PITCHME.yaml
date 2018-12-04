@@ -5,7 +5,7 @@
 # https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
 #
 theme : sky
-theme-override : assets/css/PITCHME.css
+# theme-override : assets/css/PITCHME.css
 # theme-override : assets/css/PITCHME.codemax.css
 # logo : assets/images/excella.png
 # highlight : atom-one-light
