@@ -25,6 +25,25 @@ Testing in JavaScript isn't easy. We have to deal with:
 Note:
 It's just not as simple as the "black-box" testing scenarios in our Rails code.
 
++++
+
+## So What Do We Do?
+
+We use the same libraries we always use and understand their full capabilities:
+- Jest
+- Enzyme
+- Cypress
+
++++
+
+## So What Do We Do?
+
+We should consider adding a new library into the mix:
+- Jest
+- Enzyme
+- **react-testing-library**
+- Cypress
+
 ---
 
 ## What About Snapshot Tests?
