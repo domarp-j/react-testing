@@ -54,7 +54,7 @@ We should consider adding a new library into the mix:
 
 ## Understanding Jest
 
-+++?code=code/jesteExample.rb&lang=javascript
++++?code=code/jestExample.rb&lang=javascript
 
 ---
 
