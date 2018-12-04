@@ -33,6 +33,8 @@ Snapshot testing entails an admission of defeat in capturing the essential detai
 
 - Visual Testing Handbook
 
+---
+
 ### End to End Tests with Cypress
 
 - ???
