@@ -76,7 +76,7 @@ More memorable, however
 
 @[9-12](Stateful)
 @[6](Declared as a class)
-@[30-32](Connected to a store)
+@[1-32](Connected to a store)
 
 +++?code=code/presentationComponent.js&lang=javascript&title=Dumb Component: Example
 
