@@ -311,12 +311,16 @@ Yes.
 
 Just kidding, no.
 
-Note:
++++
+
 There are times when you have to care about the specific value of state instead of changes in the DOM. But a vast majority of scenarios can and should be covered by react-testing-library.
 
 +++
 
-Also, react-testing-library is also not a replacement for powerful end-to-end testing frameworks like Cypress and Puppeteer.
+Quick note: react-testing-library is also not a replacement for powerful end-to-end testing frameworks like Cypress and Puppeteer.
+
+Note:
+Example is the prior spouse history table
 
 ---
 
