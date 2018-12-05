@@ -190,24 +190,41 @@ In fact, checking to see that a prop was passed is tantamount to testing the imp
 - Directly tests the implementation of React components
 - Gives you mechanisms to check for rendered components, elements,
 - Provides methods to check for props and state directly
-- **An often painful experience**
+
++++
+
+### Testing with Enzyme
+
+- Directly tests the implementation of React components
+- Gives you mechanisms to check for rendered components, elements,
+- Provides methods to check for props and state directly
+- **Often a painful experience**
 
 +++
 
 ### Enzyme Pain Points
 
-- Differentiating between shallow & mount is frustrating
+- [Differentiating between shallow & mount is frustrating](https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913)
 - Confusing API at times
 - Far too implementation-heavy, not as behavior-focused
-  - I shouldn't care that componentDidMount got called - I care about the reaction
-  - I shouldn't care about the values of props & state
 
 Note:
+I should not have to care about whether to use shallow or mount
 Behavior-focused testing is possible, however.
 
 +++
 
 [Enzyme Documentation](https://airbnb.io/enzyme/)
+
+---
+
+### Are There Alternatives?
+
++++
+
+### Are There Alternatives?
+
+Yes!
 
 ---
 
