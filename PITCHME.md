@@ -1,6 +1,6 @@
 @title[Introduction]
 
-## Testing Smart in React
+## React, Testing, and You
 #### Pramod Jacob
 
 ---
@@ -41,7 +41,7 @@ That last point is applicable to all testing, not just JS/React
 
 ---
 
-### Smart versus Dumb Components
+### Smart vs Dumb Components
 
 +++
 
@@ -143,7 +143,7 @@ Does this mean you should never use snapshot tests?
 
 +++
 
-Does this mean you should never use snapshot tests? **No.**
+Does this mean you should never use snapshot tests? **No.** In fact, they can be extremely useful to test presentation components (if used properly).
 
 Note:
 Snapshot tests absolutely have their place in any React test suite, but be careful not to use them as a "cop out" test to boost your test coverage.
@@ -166,13 +166,19 @@ Remember - we're testing behavior, not implementations
 
 +++?code=code/fileUploadTestNo.js&lang=javascript&title=Test Method 1 (Not Recommended)
 
-Notes:
+@[5](Does this really help us?)
+
+Note:
 Written in Jest and faux-Enzyme (real Enzyme coming later)
+This isn't helpful because we don't know that the UI has reacted properly to a change in state
 
 +++?code=code/fileUploadTestYes.js&lang=javascript&title=Test Method 2 (Recommended)
 
-Notes:
+@[5-9](Now we are checking for a change in the UI)
+
+Note:
 Written in Jest and faux-rtl (real rtl coming later)
+This is much better because we are testing if the UI has reacted properly to a change in state
 
 ---
 
@@ -182,7 +188,7 @@ Written in Jest and faux-rtl (real rtl coming later)
 
 ---
 
-### Unit versus Integration versus End-to-End
+### Unit vs Integration vs End-to-End
 
 ---
 
