@@ -99,14 +99,12 @@ This it not a hard & fast rule - this is just an ideal to strive for.
 
 ### I Have Smart & Dumb Components - Now What?
 
+Now we think about testing!
+
 Note:
 Or at least you've tried to separate them as much as possible.
 
 +++
-
-### I Have Smart & Dumb Components - Now What?
-
-We think about testing!
 
 ---
 
@@ -178,7 +176,7 @@ This is much better because we are testing if the UI has reacted properly to a c
 
 +++
 
-The same ideas for testing state also applies to props
+These principles also apply to testing changes in props
 
 Note:
 In fact, checking to see that a prop was passed is tantamount to testing the implementation of React
@@ -266,7 +264,7 @@ Unfortunately, react-testing-library is not a complete replacement for Enzyme. H
 
 ---
 
-### The Overall Picture
+![React Testing - The Overall Picture](assets/images/component_hierarchy.png)
 
 ---
 
