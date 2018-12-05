@@ -114,7 +114,7 @@ We think about testing!
 
 +++
 
-@quote["Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage."] - [The Right Way to Test React Components](https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
+@quote["Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage."](The Right Way to Test React Components)
 
 +++
 
@@ -135,7 +135,7 @@ This is where snapshot tests come in handy!
 
 +++
 
-@quote[Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all.] - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
+@quote[Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all.](Visual Testing Handbook)
 
 +++
 
