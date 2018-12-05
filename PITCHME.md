@@ -11,7 +11,7 @@
 - What mentality should we have when we approach testing with React?
 - What are unit tests like in react? What about integration tests?
 - What tools do we have at our disposal?
-- Can I get a taste of what end to end tests are like?
+- What will our end-to-end tests look like?
 
 ---
 
@@ -235,6 +235,10 @@ In fact, checking to see that a prop was passed is tantamount to testing the imp
 
 +++
 
+### Jest
+
+The testing framework that powers all of our tests
+
 ### Enzyme
 
 - Directly tests the implementation of React components
@@ -293,17 +297,34 @@ react-testing-library was built with behavior in mind, instead of React's implem
 - Tests behavior and UI changes instead of React implementation
 - Only one render option (no shallow versus mount debates)
 - Useful error messages
+- Well supported
 
 +++
 
-Unfortunately, react-testing-library is not a complete replacement for Enzyme. However, it should be used for a significant majority of unit & integration tests.
+Is react-testing-library a complete replacement for Enzyme?
+
++++
+
+Yes.
+
++++
+
+Just kidding, no.
+
+Note:
+There are times when you have to care about the specific value of state instead of changes in the DOM. But a vast majority of scenarios can and should be covered by react-testing-library.
+
++++
+
+Also, react-testing-library is also not a replacement for powerful end-to-end testing frameworks like Cypress and Puppeteer.
 
 ---
 
 ### Revisiting Unit vs Integration
 
-- More often than not, unit tests in React look more like "integration" tests
-  - "Integration" - the integration of components, not the integration of React with external systems
+- Unit tests are not quite as useful in React as they are in other frameworks
+  - UIs are simply too complicated to benefit significantly from unit tests like snapshots
+- Integration tests are more useful because they prefer behavior over implementation details
 - **We should aim to write tests that focus on behavior, not implementation**
 
 Note:
@@ -332,10 +353,12 @@ If you walk away with one thing, walk away with that last statement.
 - Don't test third-party libraries
 - Don't test proptypes
 - Unit-test JavaScript "utility" functions using plain old Jest
+- Take some time to understand the async nature of JavaScript
 
 Note:
 - I don't think most people here will test third-party libraries directly - but be careful not to test them accidentally
 - Testing proptypes is testing the implementation of a third-party library
+- If I had time, I would 100% talk more about JS async
 
 ---
 
