@@ -72,6 +72,10 @@ Note:
 Smart & dumb terminology kind of mean (Dan Abramov opposes it)
 More memorable, however
 
++++?code=code/logicalComponent.js&lang=javascript&title=Smart Component: Example
+
++++?code=code/presentationComponent.js&lang=javascript&title=Dumb Component: Example
+
 +++
 
 ![Logical vs Presentational Components](assets/images/component_hierarchy.png)
