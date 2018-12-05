@@ -41,11 +41,7 @@ That last point is applicable to all testing, not just JS/React
 
 ---
 
-### React Best Practices
-
-+++
-
-### Smart versus Dumb Components
+### A React Best Practice: Smart versus Dumb Components
 
 +++
 
@@ -86,9 +82,23 @@ More memorable, however
 
 +++
 
+### myUSCIS Example - ZipPage & FieldOfficeList
+
++++
+
 ![Logical vs Presentational Components](assets/images/component_hierarchy.png)
 
 ---
+
+### I Have Smart & Dumb Components - Now What?
+
++++
+
+### I Have Smart & Dumb Components - Now What?
+
+We think about testing!
+
++++
 
 ### What About Snapshot Tests?
 

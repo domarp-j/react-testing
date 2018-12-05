@@ -1,9 +1,9 @@
 import React from "react";
 
-import Component from "./Component";
+import Presenter from "./Presenter";
 import withStore from "./withStore";
 
-class Container extends React.Component {
+class LogicHolder extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,7 @@ class Container extends React.Component {
 
   render() {
     return (
-      <Component
+      <Presenter
         counter={this.state.counter}
         onClick={() => {
           this.setState(prevState => ({
@@ -28,4 +28,4 @@ class Container extends React.Component {
   }
 }
 
-export default withStore(Container);
+export default withStore(LogicHolder);

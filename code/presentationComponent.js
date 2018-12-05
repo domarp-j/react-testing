@@ -1,6 +1,6 @@
 import React from "react";
 
-const Component = ({ counter, onClick, toggled }) => (
+const Presenter = ({ counter, onClick, toggled }) => (
   <div>
     <div>Counter is {counter}</div>
     <div>Toggled? {toggled ? 'Yes' : 'No'}</div>
@@ -8,4 +8,4 @@ const Component = ({ counter, onClick, toggled }) => (
   </div>
 );
 
-export default Component;
+export default Presenter;
