@@ -237,7 +237,11 @@ In fact, checking to see that a prop was passed is tantamount to testing the imp
 
 ### Jest
 
-The testing framework that powers all of our tests
+- The testing framework that powers all of our tests
+- Gives us some useful mechanisms for assertsions and mocking
+- Plain old Jest is sometimes all we need!
+
++++
 
 ### Enzyme
 
@@ -326,10 +330,20 @@ Example is the prior spouse history table
 
 ### Revisiting Unit vs Integration
 
-- Unit tests are not quite as useful in React as they are in other frameworks
+Unit tests are not quite as useful in React as they are in other frameworks
   - UIs are simply too complicated to benefit significantly from unit tests like snapshots
-- Integration tests are more useful because they prefer behavior over implementation details
-- **We should aim to write tests that focus on behavior, not implementation**
+
++++
+
+### Revisiting Unit vs Integration
+
+Integration tests are more useful because they prefer behavior over implementation details
+
++++
+
+### Revisiting Unit vs Integration
+
+**We should aim to write tests that focus on behavior, not implementation**
 
 Note:
 If you walk away with one thing, walk away with that last statement.
