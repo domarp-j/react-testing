@@ -114,7 +114,7 @@ We think about testing!
 
 +++
 
-"Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage." - [The Right Way to Test React Components](https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
+@quote["Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage."] - [The Right Way to Test React Components](https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
 
 +++
 
@@ -135,7 +135,7 @@ This is where snapshot tests come in handy!
 
 +++
 
-"Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all." - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
+@quote[Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all.] - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
 
 +++
 
@@ -166,19 +166,30 @@ Remember - we're testing behavior, not implementations
 
 +++?code=code/fileUploadTestNo.js&lang=javascript&title=Test Method 1 (Not Recommended)
 
-@[5-5](Does this really help us?)
-
 Note:
 Written in Jest and faux-Enzyme (real Enzyme coming later)
 This isn't helpful because we don't know that the UI has reacted properly to a change in state
 
 +++?code=code/fileUploadTestYes.js&lang=javascript&title=Test Method 2 (Recommended)
 
-@[9-9](Now we are checking for a change in the UI)
-
 Note:
 Written in Jest and faux-rtl (real rtl coming later)
 This is much better because we are testing if the UI has reacted properly to a change in state
+
++++
+
+The same ideas for testing state also applies to props
+
+Note:
+In fact, checking to see that a prop was passed is tantamount to testing the implementation of React
+
+---
+
+### Testing with Enzyme
+
+- Directly tests the implementation of React components
+-
+- **An often painful experience**
 
 ---
 
@@ -188,7 +199,18 @@ This is much better because we are testing if the UI has reacted properly to a c
 
 ---
 
-### Unit vs Integration vs End-to-End
+### The Overall Picture
+
+---
+
+### Other Useful React Testing Rules
+
+- Don't test third-party libraries
+- Don't test proptypes
+
+Note:
+- I don't think most people here will test third-party libraries directly - but be careful not to test them accidentally
+- Testing proptypes is testing the implementation of a third-party library
 
 ---
 
