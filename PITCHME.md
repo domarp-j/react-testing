@@ -13,9 +13,6 @@
 - What tools do we have at our disposal?
 - Can I get a taste of what end to end tests are like?
 
-Note:
-"Integration" in quotes because it's definition is super vague, esp in React. It could mean integration between components or integration with external systems.
-
 ---
 
 ### Testing in JavaScript and React Isn't Easy
@@ -23,7 +20,7 @@ Note:
 - Async behavior (i.e. promises)
 - The inherent complexity of user interfaces
 - Handling external calls
-- Complex component composition/hierarchy
+- (Possibly) complex component composition/hierarchy
 
 Note:
 - It's just not as simple as the "black-box" testing scenarios in our Rails code.
@@ -33,8 +30,8 @@ Note:
 
 ### So How Can We Make Testing Easier?
 
-- Understand a particular best practice for creating React components
-- Understand the core principles of JavaScript and React testing
+- Understand logical "smart" components and presentational "dumb" components
+- Understand the intricacies of JavaScript and React testing
 - Use the right testing tools for specific testing scenarios
 - **Prefer testing behavior over focused logic**
 
@@ -95,42 +92,19 @@ ElisEvidenceUpload && FileUpload
 
 +++
 
-Separating components into Logical & Presentational components is not a hard & fast rule. It's just an ideal to strive for.
+Separating components into logical & presentational components is not a hard & fast rule. It's just an ideal to strive for.
+
+Note:
+It's not always super straightforward to determine what components should be "smart" and what should be "dumb". Just do the best you can.
 
 ---
 
 ### I Have Smart & Dumb Components - Now What?
 
-Now we are in a good place to think about testing!
+Let's think about what each component does!
 
 Note:
 Or at least you've tried to separate them as much as possible.
-
----
-
-### Unit vs Integration
-
-- Unit: Testing the functionality and behavior of a **single** component
-- Integration: Testing the functionality and behavior of **multiple** components as they interact with one another
-
-Note:
-These are my personal definitions of unit & integration tests in React.
-
-+++
-
-### Unit vs Integration
-
-- Unit: Testing the functionality and behavior of a **single** component
-  - Presentational, or "dumb" components
-- Integration: Testing the functionality and behavior of **multiple** components as they interact with one another
-  - Logical/container, or "smart" components
-
-+++
-
-Differentiating between smart and dumb components has made it easy for us to determine what type of tests to run for each component.
-
-Note:
-This is a good start, but let's keep digging to really understand the React testing mentality.
 
 ---
 
@@ -138,7 +112,7 @@ This is a good start, but let's keep digging to really understand the React test
 
 +++
 
-@quote[Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage.](The Right Way to Test React Components)
+@quote[A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage.](The Right Way to Test React Components)
 
 +++
 
@@ -149,14 +123,61 @@ This is a good start, but let's keep digging to really understand the React test
 - What state does the component hold? How does it react to changes in state?
 - When the user interacts with the component, what happens?
 
----
-
-### Testing Renders
+Note:
+This is a tool to help us really understand what our component does.
 
 +++
 
-- These are our barebones simplest unit tests
-- This is where snapshot tests come in handy!
+What does a contract look like for a typical "smart" component? What about a typical "dumb" one?
+
++++
+
+### "Dumb" Component Contracts
+
+- I **definitely** care about how this component renders
+- I care about props and how the component reacts when props change
+- The component is most likely stateless, so I'm not worried about changes in state
+- The component might not have its own behavior, but I at least have to make sure that passed-in callbacks are called
+- I care about this component as a **unit**
+
++++
+
+### "Smart" Component Contracts
+
+- I care about how this component renders
+- I care about how this component reacts to changes in both props **and** state
+- I care about the children of this component and how they behave
+- I have to think about the behavior of this component and all of it's children
+- I care about the **integration details** and **overall behavior** of this component
+
+---
+
+### Unit vs Integration Tests
+
+- Unit: Testing the functionality and behavior of a **single** component in isolation
+  - Usually "black box" tests
+- Integration: Testing the functionality and behavior of **multiple** components as they interact with one another
+  - Usually focused more on overall behavior instead of implementation details
+
+Note:
+These are my personal definitions of unit & integration tests in React.
+
++++
+
+As we go through this talk, the line between component unit tests and integration tests will blur significantly - but that's okay!
+
+---
+
+### Render Testing: The Simplest Unit Test
+
+Note:
+Let's start with the simplest case that is clearly more of an integration test.
+These are our simplest unit tests because we can simply pass in props and check for changes.
+It's the closest thing we have in the front end to a real "black box" test.
+
++++
+
+This is where snapshot tests come in handy! But...
 
 +++
 
@@ -174,17 +195,13 @@ Note:
 Snapshot tests absolutely have their place in any React test suite, but be careful not to use them as a "cop out" test to boost your test coverage.
 They are great for testing branching conditional scenarios in presentational components.
 
-+++
-
-![Unit vs Integration Part 1](assets/images/chart1.png)
-
 ---
 
-### Testing Props and State
+### Blurring the Lines: Testing Props and State
 
 +++
 
-Avoid testing props and state directly. Instead, test the **reactions** of props and state changes.
+We don't want to test props and state directly. Instead, we want to test the **reactions** of props and state changes.
 
 Note:
 Remember - we're testing behavior, not implementations
@@ -207,18 +224,18 @@ This is much better because we are testing if the UI has reacted properly to a c
 
 +++
 
-These principles also apply to testing changes in props
+Similarly, we do not want to check the value of props in tests - we want to test how the component behaves when the prop changes.
 
 Note:
 In fact, checking to see that a prop was passed is tantamount to testing the implementation of React
 
 ---
 
-### Tools for Testing Behavior?
+### The Tools at our Disposal
 
 +++
 
-### Testing with Enzyme
+### Enzyme
 
 - Directly tests the implementation of React components
 - Gives you mechanisms to check for rendered components, elements,
@@ -226,7 +243,7 @@ In fact, checking to see that a prop was passed is tantamount to testing the imp
 
 +++
 
-### Testing with Enzyme
+### Enzyme
 
 - Directly tests the implementation of React components
 - Gives you mechanisms to check for rendered components, elements,
@@ -283,6 +300,17 @@ Unfortunately, react-testing-library is not a complete replacement for Enzyme. H
 
 ---
 
+### Revisiting Unit vs Integration
+
+- More often than not, unit tests in React look more like "integration" tests
+  - "Integration" - the integration of components, not the integration of React with external systems
+- **We should aim to write tests that focus on behavior, not implementation**
+
+Note:
+If you walk away with one thing, walk away with that last statement.
+
+---
+
 ### End to End Tests with Cypress
 
 - Powerful and easy-to-use
@@ -303,6 +331,7 @@ Unfortunately, react-testing-library is not a complete replacement for Enzyme. H
 
 - Don't test third-party libraries
 - Don't test proptypes
+- Unit-test JavaScript "utility" functions using plain old Jest
 
 Note:
 - I don't think most people here will test third-party libraries directly - but be careful not to test them accidentally
