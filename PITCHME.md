@@ -206,6 +206,7 @@ In fact, checking to see that a prop was passed is tantamount to testing the imp
 
 - [Differentiating between shallow & mount is frustrating](https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913)
 - Confusing API at times
+- Polynomial relationship between component complexity & test complexity
 - Far too implementation-heavy, not as behavior-focused
 
 Note:
@@ -222,9 +223,32 @@ Behavior-focused testing is possible, however.
 
 +++
 
-### Are There Alternatives?
+### Yes!
 
-Yes!
++++
+
+### Testing with react-testing-library
+
++++
+
+@quote[The more your tests resemble the way your software is used, the more confidence they can give you.](Kent Dodds)
+
+Note:
+react-testing-library was built with behavior in mind, instead of React's implementation
+
++++?code=code/fileUploadTestYes.js&lang=javascript&title=Previous Pseudo-Implementation of FileUpload
+
++++?code=code/fileUploadTestRTL.js&lang=javascript&title=FileUpload Using react-testing-library
+
+### Benefits of react-testing-library over Enzyme
+
+- Tests behavior and UI changes instead of React implementation
+- Only one render option (no shallow versus mount debates)
+- Useful error messages
+
++++
+
+Unfortunately, react-testing-library is not a complete replacement for Enzyme. However, it should be used for a significant majority of unit & integration tests.
 
 ---
 
