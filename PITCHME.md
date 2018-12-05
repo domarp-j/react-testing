@@ -157,7 +157,7 @@ What does a contract look like for a typical "smart" component? What about a typ
 
 +++
 
-I care about this component as a **unit**
+I care about dumb components as **units**
 
 +++
 
@@ -170,9 +170,9 @@ I care about this component as a **unit**
 
 +++
 
-I care about the **integration details** and **overall behavior** of this component.
+I care about the **integration details** and **overall behavior** of smart components
 
-NOte:
+Note:
 Testing each little piece would be extremely tedious and not particularly useful.
 
 ---
@@ -181,11 +181,20 @@ Testing each little piece would be extremely tedious and not particularly useful
 
 - Unit: Testing the functionality and behavior of a **single** component in isolation
   - Usually "black box" tests
+
+Note:
+These are my personal definitions of unit & integration tests in React.
+
++++
+
+### Unit vs Integration Tests
+
 - Integration: Testing the functionality and behavior of **multiple** components as they interact with one another
   - Usually focused more on overall behavior instead of implementation details
 
 Note:
 These are my personal definitions of unit & integration tests in React.
+
 
 +++
 
@@ -222,7 +231,7 @@ They are great for testing branching conditional scenarios in presentational com
 
 ---
 
-### Blurring the Lines: Testing Props and State
+### Testing Props and State
 
 +++
 
@@ -353,29 +362,30 @@ Example is the prior spouse history table
 
 ---
 
-### Revisiting Unit vs Integration
+### Blurring the Lines Between Unit vs Integration
 
 Unit tests are not quite as useful in React as they are in other frameworks
   - UIs are simply too complicated to benefit significantly from unit tests like snapshots
 
 +++
 
-### Revisiting Unit vs Integration
+### Blurring the Lines Between Unit vs Integration
 
 Integration tests are more useful because they prefer behavior over implementation details
 
 +++
 
-### Revisiting Unit vs Integration
+### Blurring the Lines Between Unit vs Integration
 
 **We should aim to write tests that focus on behavior, not implementation**.
 
 Note:
 If you walk away with one thing, walk away with that last statement.
+They can be considered "unit" tests or "integration" tests - just make sure they focus on behavior.
 
 ---
 
-### End to End Tests with Cypress
+### A Taste of Cypress
 
 - Powerful and easy-to-use
 - Alternative to Selenium, which powers our Cucumber tests
