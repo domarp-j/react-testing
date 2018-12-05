@@ -12,7 +12,7 @@
 - How should we balance **unit tests**, **"integration" tests**, and **end-to-end tests**?
 
 Note:
-"Integration  " in quotes because it's definition is super vague, esp in React. It could mean integration between components or integration with external systems.
+"Integration" in quotes because it's definition is super vague, esp in React. It could mean integration between components or integration with external systems.
 
 ---
 
@@ -20,8 +20,8 @@ Note:
 
 - Async behavior (i.e. promises)
 - The inherent complexity of user interfaces
-- Handling external calls with mocks
-- Complex component composition/hierarchy (something in our control)
+- Handling external calls
+- Complex component composition/hierarchy
 
 Note:
 - It's just not as simple as the "black-box" testing scenarios in our Rails code.
@@ -31,9 +31,8 @@ Note:
 
 ### So How Can We Make Testing Easier?
 
-- Understand how we can distinguish "smart" and "dumb" components
-- Understand our testing tools
-- Use the right tools for specific testing scenarios
+- Understand a particular best practice for creating React components
+- Use the right testing tools for specific testing scenarios
 - **Prefer testing behavior over focused logic**
 
 Note:
@@ -82,15 +81,25 @@ More memorable, however
 
 +++
 
-### myUSCIS Example - ZipPage & FieldOfficeList
+### myUSCIS Example
+
+Note:
+ElisEvidenceUpload && FileUpload
 
 +++
 
 ![Logical vs Presentational Components](assets/images/component_hierarchy.png)
 
++++
+
+This it not a hard & fast rule.
+
 ---
 
 ### I Have Smart & Dumb Components - Now What?
+
+Note:
+Or at least you've tried to separate them as much as possible.
 
 +++
 
@@ -98,7 +107,61 @@ More memorable, however
 
 We think about testing!
 
+---
+
+### The React Testing Mentality: Component Contracts
+
+"Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage." - [The Right Way to Test React Components](https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
+
 +++
+
+### The React Testing Mentality: Component Contracts
+
+Ask yourself:
+- What does it render?
+- What props does the component receive? How does it react to changes in props?
+- What state does the component hold? How does it react to changes in state?
+- When the user interacts with the component, what happens?
+
++++
+
+### The React Testing Mentality: Component Contracts
+
++++
+
+### The React Testing Mentality: Rendered Content
+
+This is where snapshot tests come in handy!
+
++++
+
+### The React Testing Mentality: Rendered Content
+
+"Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all." - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
+
++++
+
+### The React Testing Mentality: Rendered Content
+
+Does this mean you should never use snapshot tests?
+
++++
+
+### The React Testing Mentality: Rendered Content
+
+Does this mean you should never use snapshot tests? **No.**
+
+Note:
+Snapshot tests absolutely have their place in any React test suite, but be careful not to use them as a "cop out" test to boost your test coverage.
+They are great for testing branching conditional scenarios in presentation components.
+
++++
+
+### The React Testing Mentality: Props and State
+
+As much as you can, test the **reactions** of props and state changes.
+
+---
 
 ### What About Snapshot Tests?
 
@@ -115,6 +178,10 @@ We think about testing!
 ### End to End Tests with Cypress
 
 - ???
+
+---
+
+### Unit versus Integration versus End-to-End
 
 ---
 
