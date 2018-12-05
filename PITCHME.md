@@ -47,7 +47,7 @@ We don't have many big-picture tests.
 ### So How Can We Make Testing Easier?
 
 - Understand logical "smart" components and presentational "dumb" components
-- Understand the intricacies of JavaScript and React testing
+- Understand a new overall approach to testing in React
 - Use the right testing tools for specific testing scenarios
 - **Prefer testing behavior over focused logic**
 
@@ -154,7 +154,10 @@ What does a contract look like for a typical "smart" component? What about a typ
 - I care about props and how the component reacts when props change
 - The component is most likely stateless, so I'm not worried about changes in state
 - The component might not have its own behavior, but I at least have to make sure that passed-in callbacks are called
-- I care about this component as a **unit**
+
++++
+
+I care about this component as a **unit**
 
 +++
 
@@ -164,7 +167,13 @@ What does a contract look like for a typical "smart" component? What about a typ
 - I care about how this component reacts to changes in both props **and** state
 - I care about the children of this component and how they behave
 - I have to think about the behavior of this component and all of it's children
-- I care about the **integration details** and **overall behavior** of this component
+
++++
+
+I care about the **integration details** and **overall behavior** of this component.
+
+NOte:
+Testing each little piece would be extremely tedious and not particularly useful.
 
 ---
 
