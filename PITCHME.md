@@ -41,7 +41,7 @@ That last point is applicable to all testing, not just JS/React
 
 ---
 
-### A React Best Practice: Smart versus Dumb Components
+### Smart versus Dumb Components
 
 +++
 
@@ -127,7 +127,7 @@ We think about testing!
 
 ---
 
-### Testing Rendered Content
+### Testing Renders
 
 +++
 
@@ -149,7 +149,7 @@ Note:
 Snapshot tests absolutely have their place in any React test suite, but be careful not to use them as a "cop out" test to boost your test coverage.
 They are great for testing branching conditional scenarios in presentation components.
 
-+++
+---
 
 ### Testing Props and State
 
@@ -162,17 +162,17 @@ Remember - we're testing behavior, not implementations
 
 +++?code=code/fileUpload.js&lang=javascript
 
-+++
++++?code=code/fileDisplay.js&lang=javascript
 
-### What About Snapshot Tests?
++++?code=code/fileUploadTestNo.js&lang=javascript&title=Test Method 1 (Not Recommended)
 
-"Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all." - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
+Notes:
+Written in Jest and faux-Enzyme (real Enzyme coming later)
 
----
++++?code=code/fileUploadTestYes.js&lang=javascript&title=Test Method 2 (Recommended)
 
-### Understanding Jest
-
-+++?code=code/jestExample.js&lang=javascript
+Notes:
+Written in Jest and faux-rtl (real rtl coming later)
 
 ---
 

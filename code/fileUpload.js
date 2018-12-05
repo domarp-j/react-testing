@@ -4,14 +4,15 @@ class FileUploader extends React.Component {
     this.state = { files: [] }
   }
 
+  handleDrop = file => {
+    this.setState(prevState => ({ files: prevState.push(file) }))
+  }
+
   render() {
     return (
       <div>
         {this.state.files.map(file => <FileDisplay file={file} />)}
-        <div class='file-drop-area'>
-          <input type='file' name='file-upload' />
-          <button type='submit' value='Submit' />
-        </div>
+        <FileDrop class='file-drop-area' onDrop={this.handleDrop} />
       </div>
     )
   }
