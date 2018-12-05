@@ -29,4 +29,3 @@ class Container extends React.Component {
 }
 
 export default withStore(Container);
-
