@@ -74,7 +74,15 @@ More memorable, however
 
 +++?code=code/logicalComponent.js&lang=javascript&title=Smart Component: Example
 
+@[9-12](Stateful)
+@[6](Declared as a class)
+@[31](Connected to a store)
+
 +++?code=code/presentationComponent.js&lang=javascript&title=Dumb Component: Example
+
+@[3](Just props, no state)
+@[3](Declared as a function)
+@[11](Not connected to any stores)
 
 +++
 
