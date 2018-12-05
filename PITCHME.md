@@ -188,8 +188,26 @@ In fact, checking to see that a prop was passed is tantamount to testing the imp
 ### Testing with Enzyme
 
 - Directly tests the implementation of React components
--
+- Gives you mechanisms to check for rendered components, elements,
+- Provides methods to check for props and state directly
 - **An often painful experience**
+
++++
+
+### Enzyme Pain Points
+
+- Differentiating between shallow & mount is frustrating
+- Confusing API at times
+- Far too implementation-heavy, not as behavior-focused
+  - I shouldn't care that componentDidMount got called - I care about the reaction
+  - I shouldn't care about the values of props & state
+
+Note:
+Behavior-focused testing is possible, however.
+
++++
+
+[Enzyme Documentation](https://airbnb.io/enzyme/)
 
 ---
 
