@@ -9,32 +9,32 @@
 
 - What React best practices can we follow to make testing easier?
 - What mentality should we have when we approach testing with React?
-- How should we balance **unit tests**, **"integration tests"**, and **end-to-end tests**?
+- How should we balance **unit tests**, **"integration" tests**, and **end-to-end tests**?
 
 Note:
-"Integration test" in quotes because it's definition is super vague.
+"Integration  " in quotes because it's definition is super vague, esp in React. It could mean integration between components or integration with external systems.
 
 ---
 
 ### Testing in JavaScript and React Isn't Easy
 
 - Async behavior (i.e. promises)
-- The inherent complexity with user interfaces
-- Mocking external calls
+- The inherent complexity of user interfaces
+- Handling external calls with mocks
 - Complex component composition/hierarchy (something in our control)
 
 Note:
 - It's just not as simple as the "black-box" testing scenarios in our Rails code.
 - How we compose our components will determine whether our tests are simple or complex
 
----
++++
 
 ### So How Can We Make Testing Easier?
 
-- Follow a few simple React best practices
+- Understand how we can distinguish "smart" and "dumb" components
 - Understand our testing tools
 - Use the right tools for specific testing scenarios
-- **Prefer overall behavior over focused logic**
+- **Prefer testing behavior over focused logic**
 
 Note:
 That last point is applicable to all testing, not just JS/React
@@ -43,9 +43,38 @@ That last point is applicable to all testing, not just JS/React
 
 ### React Best Practices
 
----
++++
 
 ### Smart versus Dumb Components
+
++++
+
+### Dumb Components
+
+- Also called *presentational components*
+- Deal completely with the look of components (elements, style, etc)
+- Usually stateless and functional
+- Not connected to any stores (Redux, Mobx, etc)
+
+Note:
+Addendum - can have some state pertaining to UI
+
++++
+
+### Smart Components
+
+- Also called *container components* or *logical components*
+- Handle the UI logic - what to render, when, where, etc
+- Usually stateful & class-based
+- Connected to stores
+
+Note:
+Smart & dumb terminology kind of mean (Dan Abramov opposes it)
+More memorable, however
+
++++
+
+![Logical vs Presentational Components](assets/images/logical_presentational_chart.png)
 
 ---
 
