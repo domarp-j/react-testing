@@ -32,6 +32,7 @@ Note:
 ### So How Can We Make Testing Easier?
 
 - Understand a particular best practice for creating React components
+- Understand the core principles of JavaScript and React testing
 - Use the right testing tools for specific testing scenarios
 - **Prefer testing behavior over focused logic**
 
@@ -49,7 +50,7 @@ That last point is applicable to all testing, not just JS/React
 - Also called *presentational components*
 - Deal completely with the look of components (elements, style, etc)
 - Usually stateless and functional
-- Not connected to any stores (Redux, Mobx, etc)
+- Usually not connected to any stores (Redux, Mobx, etc)
 
 Note:
 Addendum - can have some state pertaining to UI
@@ -61,7 +62,7 @@ Addendum - can have some state pertaining to UI
 - Also called *container components* or *logical components*
 - Handle the UI logic - what to render, when, where, etc
 - Usually stateful & class-based
-- Connected to stores
+- Usually connected to stores
 
 Note:
 Smart & dumb terminology kind of mean (Dan Abramov opposes it)
@@ -92,7 +93,7 @@ ElisEvidenceUpload && FileUpload
 
 +++
 
-This it not a hard & fast rule.
+This it not a hard & fast rule - this is just an ideal to strive for.
 
 ---
 
@@ -111,43 +112,36 @@ We think about testing!
 
 ### The React Testing Mentality: Component Contracts
 
++++
+
 "Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage." - [The Right Way to Test React Components](https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
 
 +++
 
 ### The React Testing Mentality: Component Contracts
 
-Ask yourself:
 - What does it render?
 - What props does the component receive? How does it react to changes in props?
 - What state does the component hold? How does it react to changes in state?
 - When the user interacts with the component, what happens?
 
+---
+
+### Testing Rendered Content
+
 +++
-
-### The React Testing Mentality: Component Contracts
-
-+++
-
-### The React Testing Mentality: Rendered Content
 
 This is where snapshot tests come in handy!
 
 +++
 
-### The React Testing Mentality: Rendered Content
-
 "Snapshot testing entails an admission of defeat in capturing the essential details of a component: instead we capture them all." - [Visual Testing Handbook](https://www.chromaticqa.com/book/visual-testing-handbook)
 
 +++
 
-### The React Testing Mentality: Rendered Content
-
 Does this mean you should never use snapshot tests?
 
 +++
-
-### The React Testing Mentality: Rendered Content
 
 Does this mean you should never use snapshot tests? **No.**
 
@@ -157,11 +151,18 @@ They are great for testing branching conditional scenarios in presentation compo
 
 +++
 
-### The React Testing Mentality: Props and State
+### Testing Props and State
 
-As much as you can, test the **reactions** of props and state changes.
++++
 
----
+Avoid testing props and state directly. Instead, test the **reactions** of props and state changes.
+
+Note:
+Remember - we're testing behavior, not implementations
+
++++?code=code/fileUpload.js&lang=javascript
+
++++
 
 ### What About Snapshot Tests?
 
