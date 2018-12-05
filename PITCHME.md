@@ -166,7 +166,7 @@ Remember - we're testing behavior, not implementations
 
 +++?code=code/fileUploadTestNo.js&lang=javascript&title=Test Method 1 (Not Recommended)
 
-@[4-5](Does this really help us?)
+@[3-5](Does this really help us?)
 
 Note:
 Written in Jest and faux-Enzyme (real Enzyme coming later)
@@ -174,7 +174,7 @@ This isn't helpful because we don't know that the UI has reacted properly to a c
 
 +++?code=code/fileUploadTestYes.js&lang=javascript&title=Test Method 2 (Recommended)
 
-@[8-9](Now we are checking for a change in the UI)
+@[5-9](Now we are checking for a change in the UI)
 
 Note:
 Written in Jest and faux-rtl (real rtl coming later)
