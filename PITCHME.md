@@ -112,7 +112,7 @@ Or at least you've tried to separate them as much as possible.
 
 +++
 
-@quote["Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage."](The Right Way to Test React Components)
+@quote[Understanding a component’s contract is the most important part of testing a React component. A contract defines the expected behavior of your component and what assumptions are reasonable to have about its usage.](The Right Way to Test React Components)
 
 +++
 
@@ -221,11 +221,7 @@ Behavior-focused testing is possible, however.
 
 +++
 
-### Yes!
-
-+++
-
-### Testing with react-testing-library
+### Yes! [react-testing-library](https://github.com/kentcdodds/react-testing-library)
 
 +++
 
@@ -234,9 +230,9 @@ Behavior-focused testing is possible, however.
 Note:
 react-testing-library was built with behavior in mind, instead of React's implementation
 
-+++?code=code/fileUploadTestYes.js&lang=javascript&title=Previous Pseudo-Implementation of FileUpload
++++?code=code/fileUploadTestYes.js&lang=javascript&title=Previous pseudo-implementation of FileUpload
 
-+++?code=code/fileUploadTestRTL.js&lang=javascript&title=FileUpload Using react-testing-library
++++?code=code/fileUploadTestRTL.js&lang=javascript&title=Testing FileUpload with react-testing-library
 
 +++
 
@@ -264,7 +260,7 @@ Unfortunately, react-testing-library is not a complete replacement for Enzyme. H
 
 ---
 
-![React Testing - The Overall Picture](assets/images/component_hierarchy.png)
+![React Testing - The Overall Picture (Proposal)](assets/images/full_diagram.png)
 
 ---
 
