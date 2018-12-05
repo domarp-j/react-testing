@@ -254,7 +254,13 @@ Unfortunately, react-testing-library is not a complete replacement for Enzyme. H
 
 ### End to End Tests with Cypress
 
-- ???
+- Powerful and easy-to-use
+- Alternative to Selenium, which powers our current Cucumber tests
+- Simple, straightforward DSL
+- Excellent debugger tools (snapshots, time travel)
+- More details forthcoming!
+
++++?code=code/cypress.js&lang=javascript&title=Cypress Example from Docs
 
 ---
 
