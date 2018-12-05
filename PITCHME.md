@@ -74,7 +74,7 @@ More memorable, however
 
 +++
 
-![Logical vs Presentational Components](assets/images/logical_presentational_chart.png)
+![Logical vs Presentational Components](assets/images/component_hierarchy.png)
 
 ---
 
