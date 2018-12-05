@@ -28,6 +28,22 @@ Note:
 
 +++
 
+### How Tests Look Now
+
+- Tons of snapshots, many of which aren't super useful
+- High amount of unit tests that checks implementation over anything else
+- Direct props & state checks
+- Few tests that check component orchestration
+
+Note:
+To boost our test coverage
+
++++
+
+We don't have many big-picture tests.
+
++++
+
 ### So How Can We Make Testing Easier?
 
 - Understand logical "smart" components and presentational "dumb" components
@@ -298,10 +314,10 @@ react-testing-library was built with behavior in mind, instead of React's implem
 
 ### Benefits of react-testing-library over Enzyme
 
-- Tests behavior and UI changes instead of React implementation
 - Only one render option (no shallow versus mount debates)
 - Useful error messages
 - Well supported
+- Tests behavior and integration instead of specific implementations
 
 +++
 
@@ -343,7 +359,7 @@ Integration tests are more useful because they prefer behavior over implementati
 
 ### Revisiting Unit vs Integration
 
-**We should aim to write tests that focus on behavior, not implementation**
+**We should aim to write tests that focus on behavior, not implementation**.
 
 Note:
 If you walk away with one thing, walk away with that last statement.
@@ -363,6 +379,10 @@ If you walk away with one thing, walk away with that last statement.
 ---
 
 ![React Testing - The Overall Picture (Proposal)](assets/images/full_diagram.png)
+
++++
+
+We should re-evaluate the testing pyramid
 
 ---
 
